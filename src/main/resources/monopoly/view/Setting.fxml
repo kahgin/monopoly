@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@BasicTheme.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.view.SettingController">
+   <top>
+      <Button layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#goBack" prefHeight="50.0" styleClass="font-small" text="  Back" textAlignment="CENTER">
+         <graphic>
+            <SVGPath content="M10 6L4 12M4 12L10 18M4 12H19" stroke="BLACK" strokeWidth="2.0" />
+         </graphic>
+         <BorderPane.margin>
+            <Insets left="20.0" top="20.0" />
+         </BorderPane.margin>
+      </Button>
+   </top>
+   <center>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="100.0" BorderPane.alignment="CENTER">
+         <Text layoutX="423.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Setting" AnchorPane.topAnchor="150.0">
+            <styleClass>
+               <String fx:value="font-large" />
+               <String fx:value="playfair-display" />
+            </styleClass>
+         </Text>
+         <HBox alignment="CENTER" layoutX="397.0" layoutY="300.0" AnchorPane.topAnchor="400.0">
+            <ImageView fitHeight="50.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../images/icon/sound-mute.png" />
+            </ImageView>
+            <Slider fx:id="volumeSlider" prefWidth="300.0" value="100.0" />
+            <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../images/icon/sound-max.png" />
+            </ImageView>
+         </HBox>
+      </VBox>
+   </center>
+   <bottom>
+      <Button fx:id="volumeButton" layoutX="523.0" layoutY="538.0" maxHeight="-Infinity" minHeight="-Infinity" mnemonicParsing="false" onAction="#mute" prefHeight="50.0" prefWidth="200.0" styleClass="font-small" text="Mute" textAlignment="CENTER" BorderPane.alignment="TOP_CENTER">
+         <BorderPane.margin>
+            <Insets bottom="150.0" />
+         </BorderPane.margin></Button>
+   </bottom>
+</BorderPane>

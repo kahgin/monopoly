@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@BasicTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.view.PlayerSetupController">
+   <right>
+      <Button fx:id="nextButton" mnemonicParsing="false" onAction="#handleNext" BorderPane.alignment="CENTER">
+         <graphic>
+            <SVGPath content="M1 41V1L21 21L1 41Z" />
+         </graphic>
+         <padding>
+            <Insets bottom="20.0" left="50.0" right="40.0" top="20.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets right="20.0" />
+         </BorderPane.margin>
+      </Button>
+   </right>
+   <left>
+      <Button fx:id="previousButton" disable="true" mnemonicParsing="false" onAction="#handlePrevious" BorderPane.alignment="CENTER">
+         <graphic>
+            <SVGPath content="M21 41L1 21L21 1V41Z" />
+         </graphic>
+         <BorderPane.margin>
+            <Insets left="20.0" />
+         </BorderPane.margin>
+         <padding>
+            <Insets bottom="20.0" left="40.0" right="50.0" top="20.0" />
+         </padding>
+      </Button>
+   </left>
+   <top>
+      <Button cancelButton="true" mnemonicParsing="false" onAction="#goBack" prefHeight="50.0" styleClass="font-small" text="  Back" BorderPane.alignment="TOP_LEFT">
+         <graphic>
+            <SVGPath content="M10 6L4 12M4 12L10 18M4 12H19" stroke="BLACK" strokeWidth="2.0" />
+         </graphic>
+         <BorderPane.margin>
+            <Insets left="20.0" top="20.0" />
+         </BorderPane.margin>
+      </Button>
+   </top>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="80.0" BorderPane.alignment="CENTER">
+         <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select your Character" textAlignment="CENTER">
+            <styleClass>
+               <String fx:value="playfair-display" />
+               <String fx:value="font-large" />
+            </styleClass></Text>
+         <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" styleClass="center">
+            <ImageView fx:id="charImage" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../images/character/1.png" />
+            </ImageView>
+            <Button fx:id="selectButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleSelect" prefHeight="50.0" prefWidth="100.0" styleClass="font-small" text="Select" />
+         </VBox>
+         <TextField fx:id="nameField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="300.0" promptText="Enter your name" styleClass="font-small" />
+      </VBox>
+   </center>
+   <bottom>
+   </bottom>
+   <bottom>
+      <Button contentDisplay="RIGHT" defaultButton="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleStartGame" prefHeight="50.0" styleClass="font-small" text="Ready  " BorderPane.alignment="BOTTOM_RIGHT">
+         <BorderPane.margin>
+            <Insets bottom="20.0" right="20.0" />
+         </BorderPane.margin>
+         <graphic>
+            <SVGPath content="M14 18L20 12M20 12L14 6M20 12L5 12" stroke="BLACK" strokeWidth="2.0" />
+         </graphic>
+      </Button>
+   </bottom>
+</BorderPane>

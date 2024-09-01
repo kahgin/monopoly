@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="card" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="100.0" stylesheets="@BasicTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.view.CardController">
+   <Pane fx:id="cardBack" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="140.0" prefWidth="90.0" />
+   <Text fx:id="content" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="playfair-display" textAlignment="CENTER" visible="false" wrappingWidth="80.0" StackPane.alignment="CENTER">
+      <StackPane.margin>
+         <Insets />
+      </StackPane.margin>
+   </Text>
+</StackPane>

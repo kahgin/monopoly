@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="squareFXML" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="150.0" styleClass="square" stylesheets="@BasicTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.view.SquareController">
+   <Pane prefHeight="200.0" prefWidth="200.0" />
+   <Text fx:id="cornerText" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="playfair-display" textAlignment="CENTER" wrappingWidth="110.0" StackPane.alignment="CENTER">
+      <StackPane.margin>
+         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+      </StackPane.margin>
+   </Text>
+</StackPane>

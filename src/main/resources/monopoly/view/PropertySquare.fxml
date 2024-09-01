@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<StackPane fx:id="squareFXML" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="100.0" styleClass="square" stylesheets="@BasicTheme.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.view.SquareController">
+   <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="100.0">
+      <StackPane fx:id="color" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="100.0" BorderPane.alignment="BOTTOM_CENTER">
+         <ImageView fx:id="p1b1" fitHeight="24.0" fitWidth="30.0" preserveRatio="true" visible="false" StackPane.alignment="BOTTOM_CENTER">
+            <Image url="@../images/board/p1b1.png" />
+            <StackPane.margin>
+               <Insets bottom="-2.0" />
+            </StackPane.margin>
+         </ImageView>
+         <ImageView fx:id="p1b2" fitHeight="38.0" fitWidth="54.0" preserveRatio="true" visible="false" StackPane.alignment="BOTTOM_CENTER">
+            <Image url="@../images/board/p1b2.png" />
+            <StackPane.margin>
+               <Insets bottom="-2.0" />
+            </StackPane.margin>
+         </ImageView>
+         <ImageView fx:id="p1b3" fitHeight="52.0" fitWidth="78.0" preserveRatio="true" visible="false" StackPane.alignment="BOTTOM_CENTER">
+            <Image url="@../images/board/p1b3.png" />
+            <StackPane.margin>
+               <Insets bottom="-2.0" />
+            </StackPane.margin>
+         </ImageView>
+         <ImageView fx:id="p2b1" fitHeight="24.0" fitWidth="30.0" preserveRatio="true" visible="false" StackPane.alignment="BOTTOM_CENTER">
+            <Image url="@../images/board/p2b1.png" />
+            <StackPane.margin>
+               <Insets bottom="-2.0" />
+            </StackPane.margin>
+         </ImageView>
+         <ImageView fx:id="p2b2" fitHeight="38.0" fitWidth="54.0" preserveRatio="true" visible="false" StackPane.alignment="BOTTOM_CENTER">
+            <Image url="@../images/board/p2b2.png" />
+            <StackPane.margin>
+               <Insets bottom="-2.0" />
+            </StackPane.margin>
+         </ImageView>
+         <ImageView fx:id="p2b3" fitHeight="52.0" fitWidth="78.0" preserveRatio="true" visible="false" StackPane.alignment="BOTTOM_CENTER">
+            <Image url="@../images/board/p2b3.png" />
+            <StackPane.margin>
+               <Insets bottom="-2.0" />
+            </StackPane.margin>
+         </ImageView>
+         </StackPane>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <Text id="propertyName" fx:id="name" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0" />
+         <Text id="propertyPrice" fx:id="price" textAlignment="CENTER" wrappingWidth="80.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+      </AnchorPane>
+   </VBox>
+</StackPane>

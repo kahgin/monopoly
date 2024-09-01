@@ -1,0 +1,12 @@
+# IntelliJ IDEA
+.idea/
+
+# Build Server Protocol
+.bsp/
+
+# Meta-build and build artifacts
+project/project/
+project/target/
+
+# SBT target directory
+target/

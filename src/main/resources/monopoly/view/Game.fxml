@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="gameRoot" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@BasicTheme.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.view.GameController">
+   <right>
+      <VBox fx:id="gameDetail" alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" spacing="20.0" BorderPane.alignment="CENTER" VBox.vgrow="ALWAYS">
+         <HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" spacing="20.0">
+            <Button id="endGameButton" fx:id="endGameButton" alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#endGame" prefHeight="50.0" prefWidth="220.0" styleClass="font-small" text="End Game" />
+            <SVGPath content="M50 25C50 38.8071 38.8071 50 25 50C11.1929 50 0 38.8071 0 25C0 11.1929 11.1929 0 25 0C38.8071 0 50 11.1929 50 25ZM27.7778 13.8889C27.7778 15.423 26.5341 16.6667 25 16.6667C23.4659 16.6667 22.2222 15.423 22.2222 13.8889C22.2222 12.3548 23.4659 11.1111 25 11.1111C26.5341 11.1111 27.7778 12.3548 27.7778 13.8889ZM27 25C27 23.8954 26.1046 23 25 23C23.8954 23 23 23.8954 23 25V38.8889C23 39.9935 23.8954 40.8889 25 40.8889C26.1046 40.8889 27 39.9935 27 38.8889V25Z" fill="WHITE" onMouseClicked="#showTutorial" stroke="BLACK" strokeWidth="2.0" styleClass="button" />
+            <SVGPath content="M18.1592 50L17.1642 42C16.6252 41.7917 16.1173 41.5417 15.6405 41.25C15.1638 40.9583 14.6973 40.6458 14.2413 40.3125L6.8408 43.4375L0 31.5625L6.40547 26.6875C6.36401 26.3958 6.34328 26.1146 6.34328 25.8438V24.1563C6.34328 23.8854 6.36401 23.6042 6.40547 23.3125L0 18.4375L6.8408 6.5625L14.2413 9.6875C14.6973 9.35417 15.1741 9.04167 15.6716 8.75C16.1692 8.45833 16.6667 8.20833 17.1642 8L18.1592 0H31.8408L32.8358 8C33.3748 8.20833 33.8827 8.45833 34.3595 8.75C34.8362 9.04167 35.3027 9.35417 35.7587 9.6875L43.1592 6.5625L50 18.4375L43.5945 23.3125C43.636 23.6042 43.6567 23.8854 43.6567 24.1563V25.8438C43.6567 26.1146 43.6153 26.3958 43.5323 26.6875L49.9378 31.5625L43.097 43.4375L35.7587 40.3125C35.3027 40.6458 34.8259 40.9583 34.3284 41.25C33.8308 41.5417 33.3333 41.7917 32.8358 42L31.8408 50H18.1592ZM25.1244 33.75C27.529 33.75 29.5813 32.8958 31.2811 31.1875C32.9809 29.4792 33.8308 27.4167 33.8308 25C33.8308 22.5833 32.9809 20.5208 31.2811 18.8125C29.5813 17.1042 27.529 16.25 25.1244 16.25C22.6783 16.25 20.6157 17.1042 18.9366 18.8125C17.2575 20.5208 16.4179 22.5833 16.4179 25C16.4179 27.4167 17.2575 29.4792 18.9366 31.1875C20.6157 32.8958 22.6783 33.75 25.1244 33.75Z" fill="WHITE" onMouseClicked="#showSetting" stroke="BLACK" strokeWidth="2.0" styleClass="button" />
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+         </HBox>
+         <StackPane minHeight="-Infinity" minWidth="-Infinity" styleClass="container" VBox.vgrow="ALWAYS">
+            <VBox fx:id="defaultGameAction" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="360.0" spacing="10.0" styleClass="center" visible="false" VBox.vgrow="ALWAYS">
+               <Text fx:id="titleDefault" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="320.0">
+                  <styleClass>
+                     <String fx:value="playfair-display" />
+                     <String fx:value="font-medium" />
+                  </styleClass>
+               </Text>
+               <Text fx:id="descDefault" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="320.0">
+                  <font>
+                     <Font size="16.0" />
+                  </font></Text>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="buttonSelectionGameAction" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="360.0" spacing="20.0" visible="false" StackPane.alignment="CENTER" VBox.vgrow="ALWAYS">
+               <VBox alignment="CENTER" spacing="10.0" styleClass="center" BorderPane.alignment="CENTER">
+                  <Text fx:id="titleButton" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="320.0">
+                     <styleClass>
+                        <String fx:value="playfair-display" />
+                        <String fx:value="font-medium" />
+                     </styleClass>
+                  </Text>
+                  <Text fx:id="descButton" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="320.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <BorderPane.margin>
+                     <Insets top="50.0" />
+                  </BorderPane.margin>
+               </VBox>
+               <StackPane fx:id="containerButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="100.0" />
+               <HBox spacing="20.0" styleClass="center" BorderPane.alignment="CENTER">
+                  <Button fx:id="yesButton" mnemonicParsing="false" text="Purchase" />
+                  <Button fx:id="noButton" mnemonicParsing="false" text="Pass" />
+                  <BorderPane.margin>
+                     <Insets bottom="30.0" />
+                  </BorderPane.margin>
+               </HBox>
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+               <padding>
+                  <Insets left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="cardSelectionGameAction" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="360.0" spacing="50.0" visible="false" StackPane.alignment="CENTER" VBox.vgrow="ALWAYS">
+               <VBox alignment="CENTER" spacing="10.0" styleClass="center" BorderPane.alignment="CENTER">
+                  <Text fx:id="titleCard" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="320.0">
+                     <styleClass>
+                        <String fx:value="playfair-display" />
+                        <String fx:value="font-medium" />
+                     </styleClass>
+                  </Text>
+                  <Text fx:id="descCard" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="320.0">
+                     <font>
+                        <Font size="16.0" />
+                     </font></Text>
+                  <BorderPane.margin>
+                     <Insets top="50.0" />
+                  </BorderPane.margin>
+               </VBox>
+               <HBox fx:id="containerCard" alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="200.0" spacing="10.0" styleClass="center" BorderPane.alignment="CENTER" />
+               <StackPane.margin>
+                  <Insets />
+               </StackPane.margin>
+               <padding>
+                  <Insets left="20.0" right="20.0" />
+               </padding>
+            </VBox>
+            <VBox fx:id="endGameGameAction" alignment="TOP_CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="360.0" visible="false" StackPane.alignment="TOP_CENTER" VBox.vgrow="ALWAYS">
+               <HBox id="top" alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0">
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 32px;" styleClass="playfair-display" text="End Game" />
+               </HBox>
+               <HBox id="winnerContainer" alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" VBox.vgrow="ALWAYS">
+                  <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefWidth="180.0" spacing="10.0">
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Win">
+                        <styleClass>
+                           <String fx:value="playfair-display" />
+                           <String fx:value="font-medium" />
+                        </styleClass>
+                     </Text>
+                     <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../images/icon/win.png" />
+                     </ImageView>
+                  </HBox>
+                  <ImageView fx:id="winImage" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
+               </HBox>
+               <HBox id="loserContainer" alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="165.0" VBox.vgrow="ALWAYS">
+                  <HBox alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefWidth="180.0" spacing="10.0">
+                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lose">
+                        <styleClass>
+                           <String fx:value="playfair-display" />
+                           <String fx:value="font-medium" />
+                        </styleClass>
+                     </Text>
+                     <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                        <Image url="@../images/icon/lose.png" />
+                     </ImageView>
+                  </HBox>
+                  <ImageView fx:id="loseImage" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
+               </HBox>
+            </VBox>
+         </StackPane>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+      </VBox>
+   </right>
+</BorderPane>

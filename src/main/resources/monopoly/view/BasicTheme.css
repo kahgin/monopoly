@@ -1,0 +1,262 @@
+/* Import Playfair Display & Roboto Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.playfair-display {
+    -fx-font-family: 'Playfair Display', serif;
+    -fx-font-weight: 700;
+}
+
+/* Global font family setting */
+* {
+    -fx-font-family: 'Roboto', sans-serif;
+}
+
+/* Player */
+#playerName {
+    -fx-font-weight: 700;
+    -fx-fill: #FFFFFF;
+    -fx-stroke: #000000;
+    -fx-stroke-width: 1px;
+    -fx-effect: dropshadow(one-pass-box, #000000, 0, 0, 0, 1);
+}
+
+#playerCash, #playerAsset {
+    -fx-font-weight: 700;
+    -fx-fill: #FFFFFF;
+    -fx-stroke: #000000;
+    -fx-stroke-width: 1px;
+    -fx-letter-spacing: 10;
+    -fx-effect: dropshadow(one-pass-box, #000000, 0, 0, 0, 1);
+}
+
+#playerCash{
+    -fx-fill: linear-gradient(from 0% 0% to 0% 100%, #FFFFFF 0%, #FFDD00 50%, #FFFFFF 100%);
+}
+
+#assetSection {
+    -fx-background-color: rgba(0, 0, 0, 0.30);
+    -fx-effect: innershadow(gaussian, rgba(0, 0, 0, 0.25), 6, 0, 0, 4);
+    -fx-background-radius: 10px;
+}
+
+#playerColor {
+    -fx-border-width: 0 2px 0 0;
+    -fx-border-color: #000000;
+    -fx-border-insets: 0 0 4px 0;
+    -fx-background-radius: 10px 0 0 10px;
+    -fx-background-insets: 0 0 4px 0; /* Insets due to drop shadow */
+}
+
+/* Global font sizes */
+.font-title {
+    -fx-font-size: 100px;
+}
+
+.font-large {
+    -fx-font-size: 50px;
+}
+
+.font-medium {
+    -fx-font-size: 24px;
+}
+
+.font-small {
+    -fx-font-size: 20px;
+}
+
+/* Button */
+.button {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10px;
+    -fx-border-color: #000000;
+    -fx-border-width: 2px;
+    -fx-effect: dropshadow(one-pass-box, #000000, 0, 0, 0, 4);
+    -fx-border-radius: 10px;
+    -fx-background-insets: 1px;
+    -fx-font-size: 20px;
+    -fx-pref-height: 50px;
+}
+
+.button:hover {
+    -fx-background-color: #e0e0e0;
+    -fx-effect: dropshadow(one-pass-box, #000000, 0, 0, 0, 4);
+}
+
+.button:pressed {
+    -fx-background-color: #e0e0e0;
+    -fx-effect: none;
+    -fx-translate-y: 4px;
+}
+
+.button:disabled {
+    -fx-opacity: 1.0;
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #a0a0a0;
+    -fx-text-fill: #a0a0a0;
+    -fx-effect: dropshadow(one-pass-box, #a0a0a0, 0, 0, 0, 4);
+}
+
+.button:disabled SVGPath {
+    -fx-fill: #a0a0a0;
+}
+
+/* Button - Dice roll */
+.button-roll {
+    -fx-background-color: #ffdd00;
+}
+
+.button-roll:hover {
+    -fx-background-color: #ccb100; /* Darker yellow */
+}
+
+#previousButton, #nextButton {
+    -fx-pref-height: 80px;
+}
+
+/* Button - End Game */
+#endGameButton:hover {
+    -fx-background-color: #e45140;
+}
+
+/* Container - used in dice roll, player */
+.container {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 10px;
+    -fx-background-insets: 1px;
+    -fx-border-color: #000000;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(one-pass-box, #000000, 0, 0, 0, 4);
+}
+
+/* Center alignment for container */
+.center {
+    -fx-alignment: center;
+}
+
+/* Slider */
+.slider {
+    -fx-padding: 10px;
+}
+
+.slider .thumb {
+    -fx-background-color: #FFFFFF;
+    -fx-background-insets: 2px;
+    -fx-background-radius: 10px;
+    -fx-border-color: #000000;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(one-pass-box, #000000, 0, 0, 0, 2);
+}
+
+.slider .track {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #000000;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 3px;
+}
+
+/* Alert */
+.dialog-pane {
+    -fx-font-size: 20px;
+    -fx-background-color: #FFFFFF;
+}
+
+.dialog-pane .container {
+    -fx-border-color: null;
+    -fx-effect: null;
+}
+
+/* Text field */
+.text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-background-insets: 1px;
+    -fx-background-radius: 10px;
+    -fx-border-color: #000000;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(one-pass-box, #000000, 0, 0, 0, 4);
+}
+
+/* Property square */
+#propertyName {
+    -fx-font-size: 16px;
+}
+
+#propertyPrice {
+    -fx-font-size: 14px;
+}
+
+/* Space */
+.square {
+    -fx-border-color: #000000;
+    -fx-border-width: 2px;
+    -fx-border-insets: -1px;
+    -fx-background-color: #FFFFFF;
+}
+
+.square #color {
+    -fx-background-insets: 0 1px;
+    -fx-border-color: #000000;
+    -fx-border-width: 0 0 2px 0;
+}
+
+/* Board */
+#cornerVIP, #cornerGoToQueue, #cornerQueue {
+    -fx-background-image: url(../images/board/pattern-corner.png);
+    -fx-background-size: cover;
+}
+
+#cornerStart {
+    -fx-background-image: url(../images/board/pattern-start.png);
+    -fx-background-size: cover;
+}
+
+#chanceSpace {
+    -fx-background-image: url(../images/board/pattern-chance.png);
+    -fx-background-size: cover;
+}
+
+.player-board {
+    -fx-background-color: #FFFFFF;
+    -fx-stroke: #000000;
+    -fx-stroke-width: 2px;
+    -fx-effect: dropshadow(one-pass-box, #000000, 0, 0, 0, 2);
+}
+
+.player-board-container {
+    -fx-spacing: 4px;
+}
+
+/* Game Action */
+#yesButton, #noButton {
+    -fx-pref-width: 150px;
+}
+
+#endGameGameAction #top {
+    -fx-background-image: url(../images/board/pattern-endgame.png);
+    -fx-background-size: cover;
+}
+
+#endGameGameAction #winnerContainer {
+    -fx-border-color: #000000;
+    -fx-border-width: 2px 0;
+}
+/* Card */
+#card {
+    -fx-border-color: #000000;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+}
+
+#cardBack {
+    -fx-background-image: url(../images/card/back.png);
+    -fx-background-repeat: no-repeat;
+    -fx-background-radius: 3px;
+    -fx-border-color: #000000;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+}

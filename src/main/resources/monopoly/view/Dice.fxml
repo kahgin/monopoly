@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+
+<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="500.0" stylesheets="@BasicTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.view.DiceController">
+   <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="80.0" spacing="20.0" styleClass="container">
+      <ImageView fx:id="diceImage" fitHeight="50.0" fitWidth="330.0" pickOnBounds="true" preserveRatio="true">
+         <Image url="@../images/dice/1.png" />
+      </ImageView>
+      <padding>
+         <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+      </padding>
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+   </HBox>
+   <SVGPath content="M2.04062 4.02307L11.1471 26.4389C11.8227 28.1019 14.1773 28.1019 14.8529 26.4389L23.9594 4.02306C24.6589 2.30111 22.8364 0.639415 21.1862 1.49458L13.9202 5.25997C13.3432 5.559 12.6568 5.559 12.0798 5.25997L4.81377 1.49458C3.16356 0.639418 1.34108 2.30111 2.04062 4.02307Z" fill="#ffdd00" stroke="BLACK" strokeLineCap="ROUND" strokeLineJoin="ROUND" strokeWidth="2.0" translateY="-35.0" />
+   <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(to right, white, white, transparent); -fx-background-radius: 10 0 0 10; -fx-background-insets: 2;" StackPane.alignment="CENTER_LEFT">
+      <StackPane.margin>
+         <Insets />
+      </StackPane.margin>
+   </VBox>
+   <VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: linear-gradient(to left, white, white, transparent); -fx-background-radius: 0 10 10 0; -fx-background-insets: 2;" StackPane.alignment="CENTER_RIGHT">
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin></VBox>
+      <HBox.margin>
+         <Insets />
+      </HBox.margin>
+   </StackPane>
+   <Button fx:id="diceButton" disable="true" mnemonicParsing="false" onAction="#rollDice" prefHeight="80.0" prefWidth="80.0" style="-fx-pref-height: 80;" text="Roll" BorderPane.alignment="CENTER">
+      <styleClass>
+         <String fx:value="font-small" />
+         <String fx:value="button-roll" />
+         <String fx:value="button" />
+      </styleClass>
+      <HBox.margin>
+         <Insets left="-2.0" />
+      </HBox.margin>
+   </Button>
+</HBox>

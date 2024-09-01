@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<HBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="360.0" styleClass="container" stylesheets="@BasicTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.view.PlayerController">
+   <VBox fx:id="playerColor" alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="230.0" spacing="5.0">
+      <Text fx:id="playerName" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-spacing: 20px;" styleClass="font-small" textAlignment="RIGHT" />
+      <VBox fx:id="assetSection" prefHeight="70.0">
+         <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" spacing="15.0">
+            <VBox.margin>
+               <Insets />
+            </VBox.margin>
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <ImageView fitHeight="25.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+               <Image url="@../images/icon/cash.png" />
+            </ImageView>
+            <Text fx:id="playerCash" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="font-medium" />
+            <padding>
+               <Insets left="15.0" right="15.0" />
+            </padding>
+         </HBox>
+         <HBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="200.0" spacing="15.0">
+            <opaqueInsets>
+               <Insets />
+            </opaqueInsets>
+            <padding>
+               <Insets left="15.0" right="15.0" />
+            </padding>
+            <ImageView pickOnBounds="true" preserveRatio="true">
+               <Image url="@../images/icon/asset.png" />
+            </ImageView>
+            <Text fx:id="playerAsset" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 18px;" />
+         </HBox>
+      </VBox>
+      <padding>
+         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+      </padding>
+   </VBox>
+   <ImageView fx:id="playerIcon" fitHeight="130.0" fitWidth="130.0" pickOnBounds="true" preserveRatio="true" />
+</HBox>
