@@ -32,9 +32,16 @@ The bot mimics a real opponent by following predefined strategies and decision-m
 🎲 [SBT](https://www.scala-sbt.org/download/)
 
 ### Setup
-1. Clone the repository:
+
+  > [!NOTE] 
+  > Install Java 8 before proceeding.
+
+1. Set up Java 8 as your default Java version:
+  
     ```
-    git clone https://github.com/kahgin/monopoly.git
+    set JAVA_HOME=C:\Program Files\Java\jdk1.8.0_xxx // Replace with your actual Java 8 installation path
+    set PATH=%JAVA_HOME%\bin;%PATH%
+    java -version
     ```
 
 2. Run the project using sbt:
